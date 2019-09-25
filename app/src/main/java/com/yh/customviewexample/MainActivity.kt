@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.yh.customviewexample.page.RotationArrowActivity
+import com.yh.customviewexample.page.SearchActivity
 import com.yh.customviewexample.page.TestActivity
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +23,12 @@ class MainActivity : AppCompatActivity() {
 
     fun jumpTest(view: View) {
         var intent= Intent(this, TestActivity::class.java)
+        startActivity(intent)
+    }
+
+
+    fun jumpSearch(view: View) {
+        var intent= Intent(this, SearchActivity::class.java)
         startActivity(intent)
     }
 }

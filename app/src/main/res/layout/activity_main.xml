@@ -20,4 +20,9 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"/>
 
+      <Button
+              android:onClick="jumpSearch"
+              android:text="搜索动画"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
 </LinearLayout>
