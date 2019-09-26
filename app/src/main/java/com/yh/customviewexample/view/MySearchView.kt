@@ -1,9 +1,7 @@
 package com.yh.customviewexample.view
 
 import android.animation.Animator
-import android.animation.Animator.*
 import android.animation.AnimatorListenerAdapter
-import android.animation.AnimatorSet
 import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.*
@@ -11,23 +9,21 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 
-class SearchView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
+class MySearchView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
     var mPaint:Paint
 
     var centerX:Int=0
     var centerY:Int=0
 
-    var curValue:Float=0f
+    var curOutValue:Float=0f
     var curInValue:Float=0f
-    var pos:FloatArray
 
     init {
         mPaint = Paint(Paint.ANTI_ALIAS_FLAG)
         mPaint.style=Paint.Style.STROKE
         mPaint.strokeWidth=10f
         mPaint.strokeCap=Paint.Cap.ROUND
-
-        pos=FloatArray(2)
+        mPaint.color= Color.WHITE
 
     }
 
@@ -67,13 +63,12 @@ class SearchView(context: Context?, attrs: AttributeSet?) : View(context, attrs)
 
         var outDst=Path()
         pathMeasure.setPath(outPath,false)
-        if (curValue <= 0.5f) {
-            pathMeasure.getSegment(curValue*pathMeasure.length,curValue*pathMeasure.length+curValue*150f,outDst,true)
+        if (curOutValue <= 0.5f) {
+            pathMeasure.getSegment(curOutValue*pathMeasure.length,curOutValue*pathMeasure.length+curOutValue*150f,outDst,true)
         }else{
-            pathMeasure.getSegment(curValue*pathMeasure.length,curValue*pathMeasure.length+(1-curValue)*150f,outDst,true)
+            pathMeasure.getSegment(curOutValue*pathMeasure.length,curOutValue*pathMeasure.length+(1-curOutValue)*150f,outDst,true)
         }
 
-        mPaint.color= Color.WHITE
         canvas?.drawPath(outDst,mPaint)
         canvas?.drawPath(intDst,mPaint)
 
@@ -91,8 +86,8 @@ class SearchView(context: Context?, attrs: AttributeSet?) : View(context, attrs)
         valueAnimator.duration=2000
         valueAnimator.addUpdateListener (object : ValueAnimator.AnimatorUpdateListener {
             override fun onAnimationUpdate(animation: ValueAnimator?) {
-                curValue= animation?.animatedValue as Float
-                Log.d("TAG", "进度:$curValue")
+                curOutValue= animation?.animatedValue as Float
+                Log.d("TAG", "进度:$curOutValue")
 
                 invalidate()
             }

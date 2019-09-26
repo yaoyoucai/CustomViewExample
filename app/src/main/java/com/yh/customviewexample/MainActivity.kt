@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.yh.customviewexample.page.DanMuLayoutActivity
 import com.yh.customviewexample.page.RotationArrowActivity
 import com.yh.customviewexample.page.SearchActivity
 import com.yh.customviewexample.page.TestActivity
@@ -29,6 +30,12 @@ class MainActivity : AppCompatActivity() {
 
     fun jumpSearch(view: View) {
         var intent= Intent(this, SearchActivity::class.java)
+        startActivity(intent)
+    }
+
+
+    fun jumpDanmu(view: View) {
+        var intent= Intent(this, DanMuLayoutActivity::class.java)
         startActivity(intent)
     }
 }
