@@ -31,4 +31,11 @@
               android:text="弹幕动画"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"/>
+
+
+      <Button
+              android:onClick="jumpFallingBall"
+              android:text="小球碰撞动画"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
 </LinearLayout>

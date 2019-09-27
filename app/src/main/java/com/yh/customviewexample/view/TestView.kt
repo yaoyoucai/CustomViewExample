@@ -8,7 +8,9 @@ import android.graphics.PathMeasure
 import android.nfc.Tag
 import android.util.AttributeSet
 import android.util.Log
+import android.util.Log.i
 import android.view.View
+import java.util.*
 
 class TestView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
     var TAG:String="TestView"
@@ -18,23 +20,27 @@ class TestView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
+        var pts= floatArrayOf(80f,100f)
 
-        var path= Path()
-        path.addRect(0f,0f,200f,200f,Path.Direction.CW)
+        var matrix= canvas?.getMatrix()
 
-        var pathMeasure:PathMeasure=PathMeasure()
-        pathMeasure.setPath(path,false)
-        var matrix:Matrix=Matrix()
+        matrix?.postScale(0.5f,1f)
 
-        pathMeasure.getMatrix(400f,matrix,PathMeasure.TANGENT_MATRIX_FLAG or PathMeasure.POSITION_MATRIX_FLAG)
-        Log.i(TAG,"matrix.value${matrix.toString()}")
+        i(TAG,"matrix:"+matrix.toString())
 
+        i(TAG,"before"+Arrays.toString(pts))
 
-        var matrix1:Matrix= Matrix()
-        matrix1.postScale(0.5f,0.8f)
-        matrix1.preTranslate(1000f,1000f)
+        matrix?.mapPoints(pts)
 
-        Log.i(TAG,"matrix1.value${matrix1.toString()}")
+        i(TAG,"after"+Arrays.toString(pts))
+
+        var radius:Float=50f
+        //半径
+        i(TAG,"before radius"+radius)
+
+        radius= matrix?.mapRadius(radius)!!
+
+        i(TAG,"after radius"+radius)
 
     }
 }
