@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="wrap_content"
         tools:context=".page.TestActivity">
-     <com.yh.customviewexample.view.TestView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"/>
+
 
      <com.yh.customviewexample.view.FlowLayout
-             android:layout_width="match_parent"
+             android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:background="#ff00ff">
 
@@ -21,8 +20,99 @@
                   android:text="Welcome"
                   android:textColor="#43BBE7" />
 
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome"
+                  android:textColor="#43BBE7" />
 
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome"
+                  android:textColor="#43BBE7" />
+
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome"
+                  android:textColor="#43BBE7" />
+
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome"
+                  android:textColor="#43BBE7" />
+
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome"
+                  android:textColor="#43BBE7" />
+
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome"
+                  android:textColor="#43BBE7" />
 
 
      </com.yh.customviewexample.view.FlowLayout>
-</android.support.constraint.ConstraintLayout>
+
+
+     <com.yh.customviewexample.view.flowlayout.MyFlowLayout
+             android:layout_marginTop="100dp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="#ff00ff">
+
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome1"
+                  android:textColor="#43BBE7" />
+
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome2"
+                  android:textColor="#43BBE7" />
+
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome3"
+                  android:textColor="#43BBE7" />
+
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome4"
+                  android:textColor="#43BBE7" />
+
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome5"
+                  android:textColor="#43BBE7" />
+
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome6"
+                  android:textColor="#43BBE7" />
+
+          <TextView
+                  style="@style/text_flag_01"
+                  android:background="@drawable/flag_03"
+                  android:text="Welcome7"
+                  android:textColor="#43BBE7" />
+
+
+     </com.yh.customviewexample.view.flowlayout.MyFlowLayout>
+
+     <com.yh.customviewexample.view.TestView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>
+
+</LinearLayout>
