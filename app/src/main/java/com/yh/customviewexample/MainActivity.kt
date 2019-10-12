@@ -40,4 +40,14 @@ class MainActivity : AppCompatActivity() {
         var intent= Intent(this, FailingBallActivity::class.java)
         startActivity(intent)
     }
+
+    fun jumpScroller(view: View) {
+        var intent= Intent(this, ScrollerActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun jumpJelly(view: View) {
+        var intent= Intent(this, JellyTextActivity::class.java)
+        startActivity(intent)
+    }
 }

@@ -38,4 +38,17 @@
               android:text="小球碰撞动画"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"/>
+
+
+      <Button
+              android:onClick="jumpScroller"
+              android:text="Scroller移动"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+
+      <Button
+              android:onClick="jumpJelly"
+              android:text="text回弹"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
 </LinearLayout>

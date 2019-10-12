@@ -9,7 +9,8 @@
         tools:context=".page.TestActivity">
 
 
-     <com.yh.customviewexample.view.FlowLayout
+     <com.yh.customviewexample.view.flowlayout.FlowLayout
+             android:layout_marginTop="100dp"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:background="#ff00ff">
@@ -57,8 +58,7 @@
                   android:textColor="#43BBE7" />
 
 
-     </com.yh.customviewexample.view.FlowLayout>
-
+     </com.yh.customviewexample.view.flowlayout.FlowLayout>
 
      <com.yh.customviewexample.view.flowlayout.MyFlowLayout
              android:layout_marginTop="100dp"
@@ -69,43 +69,43 @@
           <TextView
                   style="@style/text_flag_01"
                   android:background="@drawable/flag_03"
-                  android:text="Welcome1"
+                  android:text="Welcome"
                   android:textColor="#43BBE7" />
 
           <TextView
                   style="@style/text_flag_01"
                   android:background="@drawable/flag_03"
-                  android:text="Welcome2"
+                  android:text="Welcome"
                   android:textColor="#43BBE7" />
 
           <TextView
                   style="@style/text_flag_01"
                   android:background="@drawable/flag_03"
-                  android:text="Welcome3"
+                  android:text="Welcome"
                   android:textColor="#43BBE7" />
 
           <TextView
                   style="@style/text_flag_01"
                   android:background="@drawable/flag_03"
-                  android:text="Welcome4"
+                  android:text="Welcome"
                   android:textColor="#43BBE7" />
 
           <TextView
                   style="@style/text_flag_01"
                   android:background="@drawable/flag_03"
-                  android:text="Welcome5"
+                  android:text="Welcome"
                   android:textColor="#43BBE7" />
 
           <TextView
                   style="@style/text_flag_01"
                   android:background="@drawable/flag_03"
-                  android:text="Welcome6"
+                  android:text="Welcome"
                   android:textColor="#43BBE7" />
 
           <TextView
                   style="@style/text_flag_01"
                   android:background="@drawable/flag_03"
-                  android:text="Welcome7"
+                  android:text="Welcome"
                   android:textColor="#43BBE7" />
 
 
